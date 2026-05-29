@@ -45,16 +45,12 @@
 ### 🔹 1차 시도 (Classical ML)
 - Feature: **MFCC (80차원)**  
 - Models: **XGBoost, SVM, MLP**  
-- 결과: XGBoost 정확도 66.6%, Kaggle Score **0.71142**
-
 ---
 
 ### 🔹 2차 시도 (Basic CNN + Mel-Spectrogram)
 - 입력: `(128, T, 1)` Mel-Spectrogram  
 - 구조: Conv + Pooling 2층, Dropout 3개, Sigmoid 출력층  
 - Optimizer: Adam, Loss: Binary Crossentropy  
-- Accuracy: **69.6%**, Kaggle Score **0.69571**
-
 ---
 
 ### 🔹 3차 시도 (Improved CNN)
@@ -63,10 +59,6 @@
   - Dropout 계층별 차등 적용 → 과적합 방지  
   - EarlyStopping → 불필요한 학습 방지  
   - ModelCheckpoint → 최고 성능 모델 저장  
-- 결과  
-  - Validation Accuracy: **76%**  
-  - Kaggle Score: **0.75333**
-
 ---
 
 ## 📊 데이터 증강
@@ -75,12 +67,6 @@
   - Time Masking  
 - **Gaussian Noise 추가**  
 - → 모델 일반화 성능 향상 및 과적합 방지  
-
----
-
-## 📈 최종 결과
-- **최고 검증 정확도**: 76%  
-- **Kaggle Public Score**: 0.75333 
 
 ---
 
